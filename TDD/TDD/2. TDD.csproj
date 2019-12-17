@@ -57,7 +57,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
+    <Compile Include="FizzBuzzGameTestsRefactored.cs" />
+    <Compile Include="FizzBuzzGameTests.cs" />
+    <Compile Include="PersonExample.cs" />
+    <Compile Include="XunitExampleTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
