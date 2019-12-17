@@ -2,7 +2,7 @@
 
 namespace PizzaExample
 {
-    public partial class PizzaTests
+    public class PizzaTests
     {
         private readonly Order _order;
 

@@ -1,4 +1,5 @@
-﻿using Xunit;
+﻿using System.Linq;
+using Xunit;
 
 namespace PizzaExample
 {
@@ -12,11 +13,14 @@ namespace PizzaExample
             var menu = new Menu();
 
             var billing = new Billing(menu);
-            var bill = billing.Calculate(testOrder);
+            var x = billing.Calculate(testOrder);
+            var bill = x.ToList();
 
-            Assert.Equal(20, bill["Arek"]);
+            Assert.Equal("Arek", bill[0].Name);
+            Assert.Equal(20, bill[0].Value);
 
-            Assert.Equal(30, bill["Marek"]);
+            Assert.Equal("Marek", bill[1].Name);
+            Assert.Equal(30, bill[1].Value);
         }
 
         private static Order CreateTestOrder()

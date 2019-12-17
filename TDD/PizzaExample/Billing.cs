@@ -12,28 +12,32 @@ namespace PizzaExample
             _menu = menu;
         }
 
-        public Dictionary<string, double> Calculate(Order order)
+        public IEnumerable<BillItem> Calculate(Order order)
         {
-            var result = new Dictionary<string, double>();
-            
-            var bill = order.Positions
+            return order.Positions
                .GroupBy(x => x.Name)
-               .Select(g => new
-               {
-                   Name = g.Key,
-                   Value = g.Sum(p => Price(p.PizzaName, p.Pieces))
-               });
-
-            foreach (var item in bill)
-            {
-                result.Add(item.Name, item.Value);
-            }
-            return result;
+               .Select(g => new BillItem(
+                    g.Key,
+                   g.Sum(p => Price(p.PizzaName, p.Pieces))
+               ));
         }
 
         private double Price(string pizzaName, int pieces)
         {
             return _menu.Items.Single(i => i.Name == pizzaName).Price / 8.0 * pieces;
         }
+    }
+
+    public class BillItem
+    {
+
+        public BillItem(string name, double value)
+        {
+            Name = name;
+            Value = value;
+        }
+
+        public string Name { get; }
+        public double Value { get; }
     }
 }

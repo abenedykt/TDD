@@ -9,7 +9,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "1. Anatomia", "Anatomia\1. 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "3. PizzaExample", "PizzaExample\3. PizzaExample.csproj", "{CFEECA96-1C97-4B8C-BF58-28F8E1E11CE9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PizzaExampleTests", "PizzaExampleTests\PizzaExampleTests.csproj", "{123FFFCF-BF17-427F-A741-A694936A6261}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "3. PizzaExampleTests", "PizzaExampleTests\3. PizzaExampleTests.csproj", "{123FFFCF-BF17-427F-A741-A694936A6261}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

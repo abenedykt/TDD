@@ -60,6 +60,8 @@
     <Compile Include="BillingTests.cs" />
     <Compile Include="PizzaTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TestingWithoutStructure.cs" />
+    <Compile Include="ValueObjectsExample.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
