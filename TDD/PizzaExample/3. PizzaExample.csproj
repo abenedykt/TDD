@@ -45,6 +45,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Billing.cs" />
+    <Compile Include="Menu.cs" />
+    <Compile Include="MenuPosition.cs" />
     <Compile Include="Order.cs" />
     <Compile Include="OrderPosition.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

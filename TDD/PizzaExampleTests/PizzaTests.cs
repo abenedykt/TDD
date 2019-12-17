@@ -1,11 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using Xunit;
+﻿using Xunit;
 
 namespace PizzaExample
 {
-    public class PizzaTests
+    public partial class PizzaTests
     {
         private readonly Order _order;
 
@@ -61,105 +58,6 @@ namespace PizzaExample
             _order.Add(new OrderPosition("Jarek", 4, "Cappriciosa"));
 
             Assert.False(_order.IsValid());
-        }
-
-        [Fact]
-        public void Example()
-        {
-
-            // coding without code structure
-
-            var a = 1;
-            var b = 3;
-            var c = -50;
-
-            var delta = b * b - (4 * a * c);
-
-            if (delta > 0)
-            {
-                var x1 = (-b - Math.Sqrt(delta)) / (2 * a);
-                var x2 = (-b + Math.Sqrt(delta)) / (2 * a);
-            }
-
-        }
-
-
-        [Fact]
-        public void Billing_returns_name_and_price_for_each_person_on_the_order()
-        {
-            var testOrder = CreateTestOrder();
-
-            var menu = new Menu();
-
-            var billing = new Billing(menu);
-            var bill = billing.Calculate(testOrder);
-
-            Assert.Equal(20, bill["Arek"]);
-
-            Assert.Equal(30, bill["Marek"]);
-        }
-
-        private static Order CreateTestOrder()
-        {
-            var exampleOrder = new Order();
-            exampleOrder.Add(new OrderPosition("Arek", 4, "4 sery"));
-            exampleOrder.Add(new OrderPosition("Marek", 4, "Poznanska"));
-            return exampleOrder;
-        }
-    }
-
-    internal class Menu
-    {
-        public IEnumerable<MenuPosition> Items => new[]{
-            new MenuPosition("4 sery", 40),
-            new MenuPosition("Poznanska", 60),
-        };
-    }
-
-    public class MenuPosition
-    {
-
-        public MenuPosition(string name, int price)
-        {
-            Name = name;
-            Price = price;
-        }
-
-        public string Name { get; }
-        public double Price { get; }
-    }
-
-    internal class Billing
-    {
-        private Menu _menu;
-
-        public Billing(Menu menu)
-        {
-            _menu = menu;
-        }
-
-        internal Dictionary<string, double> Calculate(Order order)
-        {
-            var result = new Dictionary<string, double>();
-
-            var bill = order.Positions
-               .GroupBy(x => x.Name)
-               .Select(g => new
-               {
-                   Name = g.Key,
-                   Value = g.Sum(p => Price(p.PizzaName, p.Pieces))
-               });
-
-            foreach (var item in bill)
-            {
-                result.Add(item.Name, item.Value);
-            }
-            return result;
-        }
-
-        private double Price(string pizzaName, int pieces)
-        {
-            return _menu.Items.Single(i => i.Name == pizzaName).Price / 8.0 * pieces;
         }
     }
 }
