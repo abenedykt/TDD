@@ -4,7 +4,7 @@ namespace LegacyExcercise
 {
     public class BigOldClass
     {
-        public bool CanAcceptTravelExpenses(Travel travel)
+        public bool CanAcceptTravelExpenses(ITravel travel)
         {
             if (travel.Person.IsManager)
             {
@@ -14,6 +14,7 @@ namespace LegacyExcercise
                 {
                     total += expense.Value;
                 }
+
                 return total <= 5000;
             }
             else
