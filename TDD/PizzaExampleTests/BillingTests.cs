@@ -1,4 +1,5 @@
 ﻿using System.Linq;
+using NSubstitute;
 using Xunit;
 
 namespace PizzaExample
@@ -10,7 +11,14 @@ namespace PizzaExample
         {
             var testOrder = CreateTestOrder();
 
-            var menu = new Menu();
+            var menu = Substitute.For<IMenu>(); 
+            menu.Items.Returns(new[]{
+                new MenuPosition("4 sery", 40),
+                new MenuPosition("Poznanska", 60),
+                new MenuPosition("Warszawsa", 60),
+                new MenuPosition("Krakowska", 60),
+                new MenuPosition("Łódzka", 60),
+            });
 
             var billing = new Billing(menu);
             var x = billing.Calculate(testOrder);

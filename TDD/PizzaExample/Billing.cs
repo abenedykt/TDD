@@ -5,9 +5,9 @@ namespace PizzaExample
 {
     public class Billing
     {
-        private readonly Menu _menu;
+        private readonly IMenu _menu;
 
-        public Billing(Menu menu)
+        public Billing(IMenu menu)
         {
             _menu = menu;
         }

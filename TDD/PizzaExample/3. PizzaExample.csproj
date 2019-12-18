@@ -46,7 +46,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Billing.cs" />
-    <Compile Include="Menu.cs" />
+    <Compile Include="IMenu.cs" />
     <Compile Include="MenuPosition.cs" />
     <Compile Include="Order.cs" />
     <Compile Include="OrderPosition.cs" />
