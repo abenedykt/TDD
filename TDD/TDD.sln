@@ -13,6 +13,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "3. PizzaExampleTests", "Piz
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Legacy", "Legacy\Legacy.csproj", "{7DA232C0-B0C2-4C75-824E-EB0F684DAA9A}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Extra", "Extra", "{59223246-8EF6-4E73-B000-C70CA95E8843}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Integration", "Integration\Integration.csproj", "{5F7CFB64-2EB2-4FAE-8ECF-E52554582BBB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,9 +43,16 @@ Global
 		{7DA232C0-B0C2-4C75-824E-EB0F684DAA9A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7DA232C0-B0C2-4C75-824E-EB0F684DAA9A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7DA232C0-B0C2-4C75-824E-EB0F684DAA9A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5F7CFB64-2EB2-4FAE-8ECF-E52554582BBB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5F7CFB64-2EB2-4FAE-8ECF-E52554582BBB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5F7CFB64-2EB2-4FAE-8ECF-E52554582BBB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5F7CFB64-2EB2-4FAE-8ECF-E52554582BBB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{5F7CFB64-2EB2-4FAE-8ECF-E52554582BBB} = {59223246-8EF6-4E73-B000-C70CA95E8843}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {7E0D076C-893D-40C8-85C8-73ECE7A637C7}

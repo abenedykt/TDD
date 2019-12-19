@@ -70,9 +70,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
+    <Compile Include="Post.cs" />
     <Compile Include="Headspring\Enumeration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RestAssuredTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
